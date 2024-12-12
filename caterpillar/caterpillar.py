@@ -29,7 +29,6 @@ leaf.hideturtle()
 leaf.speed(0)
 
 # Add some text 
-
 game_started = False # You'll need to know later if the game has started
 
 text_turtle = t.Turtle()
