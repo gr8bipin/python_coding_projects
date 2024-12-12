@@ -6,6 +6,7 @@ t.bgcolor('yellow')
 
 # create a caterpillar turtle
 caterpillar = t.Turtle()
+
 caterpillar.shape('square')
 caterpillar.color('red')
 caterpillar.speed(0)
@@ -28,7 +29,9 @@ leaf.hideturtle()
 leaf.speed(0)
 
 # Add some text 
+
 game_started = False # You'll need to know later if the game has started
+
 text_turtle = t.Turtle()
 text_turtle.write('Press SPACE to start', align = 'center', font = ('Arial', 16, 'bold')) # this line draws some text on the screen
 text_turtle.hideturtle() # this hides the turtle but not the text
@@ -92,14 +95,17 @@ def start_game():
 
     # Get moving
     while True:
+        
         caterpillar.forward(caterpillar_speed)
+
         if caterpillar.distance(leaf) < 20: # the caterpillar eats the leaf when it's less than 20 pixels away
-            place_leaf() # the current leaf has been eaten,so add a new leaf
+            place_leaf() # the current leaf has been eaten, so add a new leaf
             caterpillar_length = caterpillar_length + 1 # this will make the caterpillar grow longer
             caterpillar.shapesize(1, caterpillar_length, 1) # this will make the caterpillar grow longer
             caterpillar_speed = caterpillar_speed + 1
             score = score + 10
             display_score(score)
+
         if outside_window():
             game_over()
             break
