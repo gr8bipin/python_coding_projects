@@ -181,6 +181,5 @@ t.listen() # the listen() function allows the program to receive signals from th
 t.mainloop() # main loop keeps the game running until explicitly closed
   
 # Test your code
-
 # start_game()
 
