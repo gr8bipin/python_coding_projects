@@ -132,27 +132,6 @@ def start_game():
             game_over()
             break
 
-def caterpillar2_move_up():
-    if caterpillar2.heading() == 0 or caterpillar2.heading() == 180:
-        caterpillar2.setheading(90)
-
-def caterpillar2_move_down():
-    if caterpillar2.heading() == 0 or caterpillar2.heading() == 180:
-        caterpillar2.setheading(270)
-
-def caterpillar2_move_left():
-    if caterpillar2.heading() == 90 or caterpillar2.heading() == 270:
-        caterpillar2.setheading(180)
-
-def caterpillar2_move_right():
-    if caterpillar2.heading() == 90 or caterpillar2.heading() == 270:
-        caterpillar2.setheading(0)
-
-t.onkey(caterpillar2_move_up, 'w')
-t.onkey(caterpillar2_move_right, 'd')
-t.onkey(caterpillar2_move_down, 's')
-t.onkey(caterpillar2_move_left, 'a')
-
 def move_up():
     if caterpillar.heading() == 0 or caterpillar.heading() == 180: # check if the caterpillar is heading left or right
         caterpillar.setheading(90)
@@ -176,6 +155,28 @@ t.onkey(move_up, 'Up')
 t.onkey(move_right, 'Right')
 t.onkey(move_down, 'Down')
 t.onkey(move_left, 'Left')
+
+def caterpillar2_move_up():
+    if caterpillar2.heading() == 0 or caterpillar2.heading() == 180:
+        caterpillar2.setheading(90)
+
+def caterpillar2_move_down():
+    if caterpillar2.heading() == 0 or caterpillar2.heading() == 180:
+        caterpillar2.setheading(270)
+
+def caterpillar2_move_left():
+    if caterpillar2.heading() == 90 or caterpillar2.heading() == 270:
+        caterpillar2.setheading(180)
+
+def caterpillar2_move_right():
+    if caterpillar2.heading() == 90 or caterpillar2.heading() == 270:
+        caterpillar2.setheading(0)
+
+t.onkey(caterpillar2_move_up, 'w')
+t.onkey(caterpillar2_move_right, 'd')
+t.onkey(caterpillar2_move_down, 's')
+t.onkey(caterpillar2_move_left, 'a')
+
 t.listen() # the listen() function allows the program to receive signals from the keyboard # listen() enables the program to detect and respond to keyboard input
 t.mainloop() # main loop keeps the game running until explicitly closed
   
