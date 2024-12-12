@@ -20,8 +20,6 @@ caterpillar2.penup()
 caterpillar2.speed(0)
 caterpillar2.hideturtle()
 
-
-
 # create a leaf turtle
 leaf = t.Turtle()
 
@@ -61,14 +59,15 @@ def outside_window():
     outside = x < left_wall or x > right_wall or y < bottom_wall or y > top_wall
     return outside # if any of the four conditions above is True, then outside is True
 
-# create a new caterpillar
 def outside_window(caterpillar):
-    caterpillar2 = t.Turtle()
-    caterpillar2.color('blue')
-    caterpillar2.shape('square')
-    caterpillar2.penup()
-    caterpillar2.speed(0)
-    caterpillar2.hideturtle()
+    left_wall = -t.window_width() / 2
+    right_wall = t.window_width() / 2
+    top_wall = t.window_height() / 2
+    bottom_wall = -t.window_height() / 2
+    (x, y) = caterpillar2.pos() # This function returns two values (a "tuple")
+
+    outside = x < left_wall or x > right_wall or y < bottom_wall or y > top_wall
+    return outside # if any of the four conditions above is True, then outside is True
 
 def game_over():
     caterpillar.color('yellow')
