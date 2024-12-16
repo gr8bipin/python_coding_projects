@@ -39,6 +39,9 @@ rectangle(100, 150, 'red') # draws a red rectangle (100 wide, 150 tall) for the 
 
 # arms
 t.goto(-150, 70) # moves to (-150, 70)
+rectangle(60, 15, 'grey') # draws a grey rectangle (60 wide, 15 tall) for the left arm
+
+t.goto(-150, 110) # moves to (-150, 110)
 rectangle(15, 40, 'grey')  # draws a grey rectangle (15 wide, 40 tall) for the left arm
 
 t.goto(10, 70) # moves to (10, 70)
